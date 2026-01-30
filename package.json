@@ -1,0 +1,36 @@
+{
+  "name": "deep-research",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm run build:packages && npm run prisma:generate",
+    "build": "turbo run build",
+    "build:packages": "turbo run build --filter='./packages/*'",
+    "predev": "npm run build:packages && npm run docker:up",
+    "dev": "dotenv -e .env -- turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
+    "check-types": "turbo run check-types",
+    "prisma:generate": "npm run prisma:generate --workspace=@repo/database",
+    "prisma:migrate": "npm run prisma:migrate --workspace=@repo/database",
+    "prisma:studio": "npm run prisma:studio --workspace=@repo/database",
+    "seed": "npm run seed --workspace=@repo/database",
+    "docker:up": "docker compose up -d"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "turbo": "^2.4.4",
+    "typescript": "5.9.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@11.5.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "dotenv-cli": "^11.0.0",
+    "prettier-plugin-tailwindcss": "^0.7.2"
+  }
+}

@@ -18,7 +18,7 @@ This is a small “deep research” agent. A user submits a query in the web UI,
 - **Worker**: Single unified worker (`deep-research` task queue) with all activities and workflows
 - **DB**: Postgres with Prisma
 
-More details and diagrams are in `ARCHITECTURE.md`.
+> Note: More details and diagrams are in `ARCHITECTURE.md`.
 
 ## Systems thinking
 

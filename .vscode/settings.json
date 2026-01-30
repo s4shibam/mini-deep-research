@@ -5,5 +5,5 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
-  "cSpell.words": ["temporalio", "vercel"]
+  "cSpell.words": ["effectful", "temporalio", "vercel"]
 }

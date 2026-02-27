@@ -41,7 +41,7 @@ export default function NewChatPage() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-2 text-gray-800">
               <Sparkles className="h-6 w-6 text-yellow-500" />
-              <h1 className="text-4xl font-semibold">Deep Research</h1>
+              <h1 className="text-4xl font-semibold">Mini Deep Research</h1>
             </div>
             <p className="mt-3 text-gray-600">
               Ask anything to start a research conversation

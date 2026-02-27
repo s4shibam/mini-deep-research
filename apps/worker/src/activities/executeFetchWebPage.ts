@@ -18,7 +18,7 @@ export async function executeFetchWebPage(input: {
     response = await fetch(validated.url, {
       redirect: 'manual',
       headers: {
-        'user-agent': 'deep-research/1.0'
+        'user-agent': 'mini-deep-research/1.0'
       },
       signal: controller.signal
     })

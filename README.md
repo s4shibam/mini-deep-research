@@ -1,4 +1,4 @@
-# Deep Research (Temporal-backed agent)
+# Mini Deep Research
 
 This is a small “deep research” agent. A user submits a query in the web UI, a Temporal workflow orchestrates tool calls (search, relevance marking, page fetch), and the UI shows the live status and results.
 
@@ -22,8 +22,8 @@ This is a small “deep research” agent. A user submits a query in the web UI,
 
 ### Platform
 
-![Deep Research platform UI](.readme/platform-1.png)
-![Deep Research platform UI](.readme/platform-2.png)
+![Mini Deep Research platform UI](.readme/platform-1.png)
+![Mini Deep Research platform UI](.readme/platform-2.png)
 
 ### Database
 
@@ -48,7 +48,7 @@ This is a small “deep research” agent. A user submits a query in the web UI,
 4. Install deps: `npm install`
 5. Run Prisma migrate: `npm run prisma:migrate`
 6. Start Temporal: `temporal server start-dev`
-7. Start Deep Research UI and Worker: `npm run dev`
+7. Start Mini Deep Research UI and Worker: `npm run dev`
 
 ## How a request flows
 

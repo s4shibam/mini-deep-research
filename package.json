@@ -1,5 +1,5 @@
 {
-  "name": "deep-research",
+  "name": "mini-deep-research",
   "private": true,
   "scripts": {
     "postinstall": "npm run build:packages && npm run prisma:generate",

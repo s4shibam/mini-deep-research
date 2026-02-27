@@ -9,7 +9,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Deep Research',
+  title: 'Mini Deep Research',
   description: 'Temporal-powered deep research assistant'
 }
 

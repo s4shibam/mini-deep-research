@@ -30,7 +30,7 @@ export async function deepResearchWorkflow(
   await updateConversationStatus({
     conversationId,
     status: ConversationStatus.processing,
-    loaderText: 'Starting deep research and gathering sources...'
+    loaderText: 'Starting research and gathering sources...'
   })
 
   let nextIndex = await getNextMessageIndex({ conversationId })

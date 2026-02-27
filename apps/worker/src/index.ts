@@ -15,7 +15,7 @@ async function run() {
     maxConcurrentActivityTaskExecutions: 100
   })
 
-  console.log('✓ Deep Research Worker started on task queue: deep-research')
+  console.log('✓ Mini Deep Research Worker started on task queue: deep-research')
   console.log('  - Registered activities:', Object.keys(activities).join(', '))
   console.log('  - Workflows path:', resolve(__dirname, './workflows'))
 

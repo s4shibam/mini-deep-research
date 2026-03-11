@@ -1,7 +1,9 @@
 import type { ConversationSummary, ConversationWithMessages } from '@repo/types'
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+
 export async function fetchConversations(): Promise<ConversationSummary[]> {
-  const response = await fetch('/api/conversations')
+  const response = await fetch(`${API_URL}/api/conversations`)
   if (!response.ok) {
     throw new Error('Failed to load conversations')
   }
@@ -11,7 +13,7 @@ export async function fetchConversations(): Promise<ConversationSummary[]> {
 export async function fetchConversation(
   conversationId: string
 ): Promise<ConversationWithMessages> {
-  const response = await fetch(`/api/conversations/${conversationId}`)
+  const response = await fetch(`${API_URL}/api/conversations/${conversationId}`)
   if (!response.ok) {
     throw new Error('Conversation not found')
   }
@@ -20,7 +22,7 @@ export async function fetchConversation(
 
 export async function postMessage(conversationId: string, text: string) {
   const response = await fetch(
-    `/api/conversations/${conversationId}/messages`,
+    `${API_URL}/api/conversations/${conversationId}/messages`,
     {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
